@@ -73,3 +73,116 @@ RUN command will execute at the time of image creation
 
 CMD command will execute at the time of running container.
 
+In a Dockerfile, both the RUN and CMD commands are used to execute instructions within a Docker container, but they serve different purposes.
+
+RUN Command:
+The RUN command is used to execute commands during the build process of a Docker image. Each RUN instruction creates a new layer in the image. These instructions are typically used to install dependencies, configure the environment, and perform other build-time tasks.
+
+Here's an example:
+
+FROM ubuntu:latest
+
+RUN apt-get update && apt-get install -y \
+    package1 \
+    package2
+
+In the above example, the RUN command is used to update the package lists and install package1 and package2 during the image build.
+
+CMD Command:
+The CMD command is used to provide default commands or instructions to be executed when a Docker container based on the image is run. There can be only one CMD instruction in a Dockerfile, and if multiple CMD instructions are specified, only the last one will be effective.
+
+Here's an example:
+
+FROM ubuntu:latest
+
+RUN apt-get update && apt-get install -y package1
+
+CMD ["echo", "Hello, Docker!"]
+
+
+In the above example, the CMD instruction specifies that the command echo "Hello, Docker!" should be executed when a container is run using the image. This will be the default command executed unless overridden by the user during container startup.
+
+
+To run the above container and see the output, you would use the docker run command:
+
+$ docker run <image_name>
+
+
+In this case, it would output:
+Hello, Docker!
+
+
+Note that the CMD instruction can be overridden by passing a command as an argument when running the container. For example:
+
+$ docker run <image_name> echo "Overridden command"
+
+
+$ docker run <image_name> echo "Overridden command"
+
+
+In this case, the output would be:
+
+Overridden command
+
+
+To summarize, the RUN command is used during the image build process to execute instructions and create new image layers, while the CMD command specifies the default command to be executed when running a container based on the image.
+
+Few Examples:
+
+
+FROM python:3.9
+
+COPY script.py /app/
+
+CMD ["python", "/app/script.py"]
+
+
+In this example, the Dockerfile specifies a Python base image and copies a script named script.py into the /app/ directory inside the container. The CMD instruction then sets the default command to execute the script using the Python interpreter.
+
+
+Running a Web Server:
+
+FROM nginx:latest
+
+COPY index.html /usr/share/nginx/html/
+
+CMD ["nginx", "-g", "daemon off;"]
+
+
+In this case, the Dockerfile is based on the official NGINX image. It copies an index.html file into the /usr/share/nginx/html/ directory, which serves as the default HTML content for the web server. The CMD instruction starts the NGINX server and keeps it running in the foreground using the "daemon off;" option.
+
+
+Setting Environment Variables:
+
+
+FROM ubuntu:latest
+
+ENV MY_VAR=my_value
+
+CMD ["echo", "$MY_VAR"]
+
+
+
+Here, the Dockerfile sets an environment variable MY_VAR with the value "my_value". The CMD instruction uses echo to print the value of MY_VAR. The $MY_VAR syntax is used to reference the environment variable within the Dockerfile.
+
+
+
+Running a Custom Command:
+
+FROM ubuntu:latest
+
+CMD ["/bin/bash", "-c", "echo 'Hello, Docker!' && echo 'Goodbye, Docker!'"]
+
+
+
+In this example, the CMD instruction uses /bin/bash as the command interpreter (-c flag) and provides a sequence of commands to execute within the container. Here, it prints both "Hello, Docker!" and "Goodbye, Docker!".
+
+Remember that the CMD instruction provides the default command when running the container. It can be overridden by passing a different command as an argument when using the docker run command.
+
+==========================================
+
+
+docker exec -it <image id > bash
+
+
+
