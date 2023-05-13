@@ -7,3 +7,13 @@ Docker will give us some syntax to create our own images
 
 FROM almalinux
 
+Building an image from the dockerfile:
+--------------------------------------------------------
+
+command syntax : 
+
+docker build -t [docker-hub-url]/your user name/your image name:version . (dot . ) is compulsory
+
+docker hub url is docker.io
+
+but   need to provide the docker hub url 
