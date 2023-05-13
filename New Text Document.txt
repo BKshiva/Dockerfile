@@ -16,4 +16,6 @@ docker build -t [docker-hub-url]/your user name/your image name:version . (dot .
 
 docker hub url is docker.io
 
-but   need to provide the docker hub url 
+but   need to provide the docker hub url and username also but official images does not have usernames but if we want to pull images with our dockerhub username it is our wish
+
+
