@@ -50,3 +50,15 @@ xyz  = docker-hub username
 from:v1 = image with the version 
 
 
+===========================================================================
+
+
+
+RUN Command:
+---------------------
+
+
+RUN instruction we use to install softwares, Packages, and other tasks. It runs at the time of image building
+
+
+
