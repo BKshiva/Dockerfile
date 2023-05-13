@@ -19,3 +19,34 @@ docker hub url is docker.io
 but   need to provide the docker hub url and username also but official images does not have usernames but if we want to pull images with our dockerhub username it is our wish
 
 
+Note to build  image from the docker file using docker build command,  with user name is not mandatory but if you want to push the image without username it is not possible in that case you need to tag the image then you need to push to docker hub 
+
+
+Example :
+
+A Dockerfile is there in your local system
+
+you build the image by giving the command "  docker build -t from:v1 " 
+
+Then docker image is created and it is reflected by typing the command " docker images "
+
+The output is similar to :
+
+
+REPOSITORY                      TAG                       IMAGE ID       CREATED         SIZE
+from                            v1                        3c6f0510f311   15 hours ago    184MB
+
+
+for example if  your docker hub username is xyz and if you wish to push to dockerhub then the command would be " docker push xyz/from:v1 "
+
+but this throwing error like this :  " The push refers to repository [docker.io/xyz/from]
+An image does not exist locally with the tag: xyz/from  "
+
+
+In order to push this image to your docker hub then you need to tag the image like this :  "  docker tag <image ID > xyz/from:v1 "
+
+xyz  = docker-hub username
+
+from:v1 = image with the version 
+
+
