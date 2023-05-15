@@ -207,6 +207,16 @@ docker inspect <image id>
 
 Note : While giving the labels the left ones are in capital letters for example here in this case the AUTHORshould be in the capital letters
 
+=======================================================================================
+
+
+EXPOSE:
+
+EXPOSE instruction is useful to tell the users of the image about the ports and protocols image/containers 
+is opening.
+
+It will not have any functionality, It is used only to tell the information
+
 
 
 
