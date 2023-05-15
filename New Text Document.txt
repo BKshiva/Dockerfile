@@ -268,6 +268,15 @@ ENTRYPOINT is also used to run the container just like CMD. But there are few di
 
 6. you can stop misusing youtr image with other commands.
 
+===================================================================
+
+
+USER :
+
+It is used to run the commands as particular user.
+
+
+
 
 
 
