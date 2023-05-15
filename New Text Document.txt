@@ -217,6 +217,10 @@ is opening.
 
 It will not have any functionality, It is used only to tell the information
 
+You can see what ports are exposed in the docker inspect <imade id>
+
+as well as docker ps comand to list all containers and the exposed port/protocols
+
 
 
 
