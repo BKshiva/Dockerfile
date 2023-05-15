@@ -275,6 +275,14 @@ USER :
 
 It is used to run the commands as particular user.
 
+=====================
+
+WORKDIR:
+
+WORKDIR is used to set the path to the image while creating
+
+
+
 
 
 
