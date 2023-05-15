@@ -250,6 +250,26 @@ ADD is same as copy it is useful to copy fils from local to container. BUT it ha
 1. ADD can download the file directly from the internet to the container
 2. ADD can untar/unzip the file directly in to the computer.
 
+===================================================
+
+
+ENTRYPOINT:
+
+ENTRYPOINT is also used to run the container just like CMD. But there are few differences.
+1. We cant override ENTRYPOINT, but we can override CMD.
+
+2. We cant override ENTRYPOINT, If you try to do so it will go and append to the ENTRYPOINT command
+
+3. If you use CMD and ENTRYPOINT  and dont give any command from termnal, CMD acts as argument provider to ENTRYPOINT.
+
+4. CMD will supply default arguments to ENTRYPOINT.
+
+5. You can always override CMD arguments from runtime
+
+6. you can stop misusing youtr image with other commands.
+
+
+
 
 
 
