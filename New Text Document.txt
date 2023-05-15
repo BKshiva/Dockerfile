@@ -282,6 +282,28 @@ WORKDIR:
 WORKDIR is used to set the path to the image while creating
 
 
+===============================================
+
+
+    ARG:
+
+    ARG is used to supply few variables at the image creation.
+
+    ARG is the only instruction you can use  before FROM . 
+
+    ARG declaRed before cant be accessed after FROM.
+
+    ### for best results use ENV and ARG together
+
+    * create one env variable andd assign the value of ARG to that
+
+    * Then we can access ARG values through ENV both in image and container.
+
+    
+
+
+
+
 
 
 
