@@ -221,8 +221,15 @@ You can see what ports are exposed in the docker inspect <imade id>
 
 as well as docker ps comand to list all containers and the exposed port/protocols
 
+===============================================================
 
 
+ENV:
+
+ENV is the instruction to provide the environmental variables to image and container.
 
 
+To overide the env variable at run time  we can give like this :
+
+docker run -e AUTHOR=krishna env:v1 env
 
