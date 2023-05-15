@@ -181,8 +181,34 @@ Remember that the CMD instruction provides the default command when running the 
 
 ==========================================
 
+after installing nginx
 
 docker exec -it <image id > bash
+
+
+cd /usr/share/nginx/html
+
+docker start 78c1bd45c862
+
+
+
+========================================
+
+
+LABEL :
+
+LABEL instruction is used to give some metadata information.
+
+docker inspect <image id>
+
+ to filter the docker images based on the label:
+
+ docker images --filter "label=AUTHOR=Siva Krishna" (In the docker file we have to give labels that value we should give here)
+
+Note : While giving the labels the left ones are in capital letters for example here in this case the AUTHORshould be in the capital letters
+
+
+
 
 
 

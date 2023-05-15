@@ -1,4 +1,4 @@
 FROM almalinux
-LABEL Author="Siva Krishna" \
-      Course="Docker"
-                
+LABEL AUTHOR="Siva Krishna" \
+      COURSE="Docker"
+
