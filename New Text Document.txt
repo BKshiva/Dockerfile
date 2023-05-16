@@ -299,6 +299,15 @@ WORKDIR is used to set the path to the image while creating
 
     * Then we can access ARG values through ENV both in image and container.
 
+    ===============================================
+
+    ONBUILD:
+
+    ONBUILD is useed to set some hard guidelines to the image
+
+    We can control how others can use our image as their bas image.
+
+    
     
 
 
