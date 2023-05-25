@@ -10,3 +10,16 @@ docker volume ls
 
 docker volume inspect <volume name>
 
+To attach a created volume to the container 
+    
+cmd: docker run -d -v nginx:/usr/share/nginx/html -p 80:80 nginx
+    
+    -p : host port: container port = Port mapping
+    
+    -v : host path: container Path = Volume mapping
+             nginx: /usr/share/nginx/html
+
+             nginx = name of the container
+             
+
+
