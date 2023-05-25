@@ -1,0 +1,12 @@
+Docker containers are ephemeral, when you remove the container by default it will delete the data.
+
+Docker volumes:
+
+Path : /var/lib/docker/volumes
+
+docker volume create <Name of the Volume>
+
+docker volume ls
+
+docker volume inspect <volume name>
+
