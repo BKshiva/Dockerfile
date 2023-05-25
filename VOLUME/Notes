@@ -20,6 +20,10 @@ cmd: docker run -d -v nginx:/usr/share/nginx/html -p 80:80 nginx
              nginx: /usr/share/nginx/html
 
              nginx = name of the container
-             
+
+    Inside host you will have a directory for volume .
+
+    This directory can be mounted with any path inside the container.
+
 
 
